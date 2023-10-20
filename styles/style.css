@@ -24,17 +24,32 @@
 } */
 
 .spinner {
-    width: 100px; /* Розмір іконки (змінюйте за потребою) */
-    height: 100px; /* Розмір іконки (змінюйте за потребою) */
+    width: 100px; 
+    height: 100px; 
     animation: loader 1.5s linear infinite;
   }
 
 
 
+
+
 /* @keyframes loader {
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: scale(1); 
+  }
+  25% {
+    transform: scale(1.5); 
+  }
+  
+  75% {
+    transform: scale(0.1);
+  }
+} */
+
+/* @keyframes loader {
+  100% {
+      transform: rotate(360deg);
+  }
 } */
 
 @keyframes loader {
@@ -44,13 +59,14 @@
   25% {
     transform: scale(1.5); /* Збільшення */
   }
-  /* 50% {
-    transform: scale(
-      1.5
-    ); 
-  } */
+  50% {
+    transform: scale(1); /* Повернення до початкового розміру */
+  }
   75% {
-    transform: scale(0.1);
+    transform: scale(0.1); /* Зменшення */
+  }
+  100% {
+    transform: rotate(360deg); /* Обертання */
   }
 }
 
